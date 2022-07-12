@@ -1,8 +1,8 @@
-Welcome to Lumache's documentation!
+Welcome to CANELa_Loevlie documentation!
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
+**CANELa_Loevlie** (/lu'make/) is a Python library for members of the CANELa lab to understand how to use and improve upon Denny Loevlie's code from 2021-2022.
+
 It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
 and offers a *simple* and *intuitive* API.
 
