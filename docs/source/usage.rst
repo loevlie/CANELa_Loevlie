@@ -12,10 +12,21 @@ To use cp2k_helper, first install it using pip:
 
    (.venv) $ pip install cp2k_helper
 
+You should also be able to instal ce_expansion using the following code:
+
+.. code-block:: console
+
+   (.venv) $ pip install git+https://github.com/mpourmpakis/ce_expansion.git
 
 
+Other dependencies include:
 
-Creating recipes
+* ASE
+* Click
+* Pandas
+
+
+Package Overviews
 ----------------
 
 To retrieve a list of random ingredients,
