@@ -6,11 +6,14 @@ Usage
 Installation
 ------------
 
-To use Lumache, first install it using pip:
+To use cp2k_helper, first install it using pip:
 
 .. code-block:: console
 
-   (.venv) $ pip install lumache
+   (.venv) $ pip install cp2k_helper
+
+
+
 
 Creating recipes
 ----------------

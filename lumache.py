@@ -1,5 +1,5 @@
 """
-Lumache - Python library for cooks and food lovers.
+CANELa_Loevlie - a collection of python codes for members of the CANELa lab to understand how to use and improve upon Denny Loevlie's work from 2021-2022.
 """
 
 __version__ = "0.1.0"
