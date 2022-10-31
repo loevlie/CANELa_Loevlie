@@ -42,13 +42,6 @@ Other dependencies include:
 Package Overviews
 ----------------
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-   cp2k_helper
-   CANELa_NP
-
 
 cp2k_helper
 ^^^^^^^^^^^^^
