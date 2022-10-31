@@ -38,8 +38,8 @@ templates_path = ['_templates']
 
 # -- Options for HTML output
 
-# html_theme = 'sphinx_rtd_theme'
-html_theme = "furo"
+html_theme = 'sphinx_rtd_theme'
+# html_theme = "furo"
 
 
 # -- Options for EPUB output
