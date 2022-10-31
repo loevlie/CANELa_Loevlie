@@ -67,9 +67,82 @@ will raise an exception.
 CANELa_NP
 ^^^^^^^^^^^^^
 
+
+Importing packages:
+.. code-block:: python
+   from CANELa_NP.Nanotools import Nanoparticle
+   import ase.cluster as ac
+
+Creating a bimetallic ase atoms object:
+.. code-block:: python
+   atoms = ac.Icosahedron('Au', 5)
+   atoms.symbols[100:] = 'Pd'
+
+Creating a nanoparticle object:
+.. code-block:: python
+   NP = Nanoparticle(atoms)
+
+Visualizing the non-optimized chemical ordering:
+.. code-block:: python
+   NP.core_shell_plot()
+
+.. image:: README_Notebook_10_0.png
+
+Optimizing the chemical ordering with a genetic algorithm:
+.. code-block:: python
+   NP.run_ga(max_gens=-1,max_nochange=1_000)
+
+.. code-block::
+   --------------------------------------------------
+   GA Sim for Au100Pd209 - none:
+   Min: -3.66177 eV/atom -- Gen: 02840
+   Form: Au100Pd209
+   nAtom: 309
+   nGens: 2840
+   Start: -3.44202 eV/atom
+   Best: -3.66177 eV/atom
+   Diff: -0.21974 eV/atom (6.38%)
+   Mute: 80.0%
+   Pop: 50
+   Time: 0:00:28
+   --------------------------------------------------
+   Saving optimized structure...
+   Done!
+
+Visualizing the optimized chemical ordering:
+.. code-block:: python
+   NP.core_shell_plot()
+
+.. image:: README_Notebook_14_0.png
+
+Visualizing the NP (with ase gui and molgif)
+
+.. image:: full_np.png 
+   :width: 50%
+.. image:: Au100Pd209.gif
+   :width: 50%
+
+
+.. list-table:: Visualizing Full Optimized NP
+   :widths: 30 30
+   :header-rows: 1
+
+   * - NP.view()
+     - .. image:: README_Notebook_15_0.png
+     - Description
+   * - molgif(NP.atoms,add_legend=True)
+     - 2.99
+     - On a stick!
+
+
 For example:
 
 >>> import lumache
 >>> lumache.get_random_ingredients()
 ['shells', 'gorgonzola', 'parsley']
 
+
+.. toctree::
+   :caption: Contents:
+   :glob:
+   usage/*
