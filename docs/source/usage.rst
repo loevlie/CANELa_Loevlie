@@ -54,6 +54,12 @@ This package is a collection of functions that I use to parse and analyze CP2K o
    :undoc-members:
    :show-inheritance:
 
+.. automodule:: cp2k_helper.__main__
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
 
 CANELa_NP
 ^^^^^^^^^^
