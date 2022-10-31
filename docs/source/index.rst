@@ -18,4 +18,7 @@ Contents
 
 .. toctree::
 
-   usage
+   usage/installation
+   usage/Package Overviews/cp2k_helper
+   usage/Package Overviews/CANELa_NP
+
