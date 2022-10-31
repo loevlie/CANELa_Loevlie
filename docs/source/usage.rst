@@ -46,7 +46,10 @@ Package Overviews
 cp2k_helper
 ^^^^^^^^^^^^^
 .. automodule:: cp2k_helper.cp2k_helper.cp2k_helper
+   :imported-members:
    :members:
+   :undoc-members:
+   :show-inheritance:
 
 
 
