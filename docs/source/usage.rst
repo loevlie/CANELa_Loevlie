@@ -45,9 +45,9 @@ Package Overviews
 
 cp2k_helper
 ^^^^^^^^^^^^^
-
-############################################################################################
 This package is a collection of functions that I use to parse and analyze CP2K output files. 
+############################################################################################
+Code Overview
 ############################################################################################
 
 .. automodule:: cp2k_helper.cp2k_helper
@@ -55,6 +55,9 @@ This package is a collection of functions that I use to parse and analyze CP2K o
    :undoc-members:
    :show-inheritance:
 
+############################################################################################
+Example Usage
+############################################################################################
 
 
 
