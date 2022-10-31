@@ -142,9 +142,9 @@ Right side:
 
 
 .. image:: ../../full_np.png 
-   :width: 20%
-.. image:: ../../Au100Pd209.gif
    :width: 40%
+.. image:: ../../Au100Pd209.gif
+   :width: 50%
 
 
 For example:
