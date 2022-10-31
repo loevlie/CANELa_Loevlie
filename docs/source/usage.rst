@@ -123,15 +123,26 @@ Optimizing the chemical ordering with a genetic algorithm:
 Visualizing the optimized chemical ordering:
 
 .. code-block:: python
-   
+
    NP.core_shell_plot()
 
 .. image:: ../../README_Notebook_14_0.png
 
-Visualizing the NP (with ase gui and molgif)
+Visualizing the NP.
+
+Left side:
+.. code-block:: python
+
+   NP.view()
+
+Right side:
+.. code-block:: python
+
+   molgif(NP.atoms,add_legend=True)
+
 
 .. image:: ../../full_np.png 
-   :width: 40%
+   :width: 20%
 .. image:: ../../Au100Pd209.gif
    :width: 40%
 
