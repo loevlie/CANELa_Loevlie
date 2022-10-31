@@ -130,21 +130,24 @@ Visualizing the optimized chemical ordering:
 
 Visualizing the NP.
 
-Left side:
+Visualizing with ase:
+
 .. code-block:: python
 
    NP.view()
 
-Right side:
+.. image:: ../../full_np.png 
+
+
+Visuaizing with molgif:
+
 .. code-block:: python
 
    molgif(NP.atoms,add_legend=True)
 
 
-.. image:: ../../full_np.png 
-   :width: 40%
 .. image:: ../../Au100Pd209.gif
-   :width: 50%
+
 
 
 For example:
