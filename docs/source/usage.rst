@@ -45,7 +45,9 @@ Package Overviews
 
 cp2k_helper
 ^^^^^^^^^^^^^
+
 This package is a collection of functions that I use to parse and analyze CP2K output files. 
+
 ############################################################################################
 Code Overview
 ############################################################################################
@@ -59,6 +61,89 @@ Code Overview
 Example Usage
 ############################################################################################
 
+Uses
+
+* Retreive information from the output files generated after running a calculation using cp2k.
+
+Important Note 
+
+* The class will retrieve all information under the given directory (with a max depth as an optional extra argument) and use the directory names to classify each calculation you ran. Therefore, you should not have two separate cp2k calculations with the same directory name.
+
+Example
+
+The output will be a dictionary of dictionaries (Containing the single point Energy calculations and Geometric optimization final energies found under the specified directory)
+
+.. code-block:: python
+
+   from cp2k_helper import output_parser
+   # Depth automatically set to inf
+   parser = output_parser(base_file_path='./cp2k') 
+   # If all=False then only the final energies will be retrieved
+   Energies = parser.get_energies(all=False) 
+   print(Energies)
+
+Output:
+
+.. code-block:: console
+
+   {'ENERGY': defaultdict(float,
+             {'Folder_Name1': -1000.997638482306,
+              'Folder_Name2': -1000.997638482306,
+              'Folder_Name6': -1000.900349392778}),
+   'GEO_OPT': defaultdict(None,
+               {'Folder_Name5': -1000.900349392778,
+               'Folder_Name7': -1000.997638482306,
+               'Folder_Name3': -1000.900349392778,
+               'Folder_Name4': -1000.900349392778})}
+
+Note:
+
+* The output example has fake folder names and energy values for proprietary reasons.
+
+Command line tools
+
+Restart
+
+cp2k_helper has a handy command line tool for restarting a calculation if it timed out. Just execute the command below in the directory that the calculation timed out and a new subdirectory will be created for the new job. You can then submit the new job to restart the calculation.
+
+.. code-block:: console
+
+   (venv) $ cp2k_helper --restart
+
+summ
+
+cp2k_helper can give you a quick summary of your output file. Just use the command below with your output filename:
+
+.. code-block:: console
+
+   (venv) $ cp2k_helper --summ OPT.out
+
+
+energy 
+
+cp2k_helper can quickly get you the final energy values from all GEO_OPT or ENERGY DFT calculations under a specified directory. The values are converted from Ha to eV. They are saved as a csv (optionally you may name it whatever you want but the default is Energies.csv). An example of using this feature for all of the calculations under the current folder is below:
+
+.. code-block:: console
+
+   (venv) $ cp2k_helper --energy . My_Energy_Values 
+
+The above command will save a csv file to your current directory with all of the final energy values along with the type of calculation run and the folder name of each. As of now the .csv file will look similar to below (if you had 4 DFT calculations in the given directory).
+
+Energies.csv
+
+.. list-table:: Title
+   :widths: 25 25 50
+   :header-rows: 1
+
+   * - Folder_Name
+     - Heading row 1, column 2
+     - Heading row 1, column 3
+   * - Type
+     -
+     - Row 1, column 3
+   * - Energy (eV)
+     - Row 2, column 2
+     - Row 2, column 3
 
 
 CANELa_NP
