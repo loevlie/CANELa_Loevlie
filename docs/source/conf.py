@@ -4,7 +4,7 @@
 import os
 import sys
 # sys.path.insert(0, os.path.abspath('.'))
-sys.path.insert(0,os.path.abspath('..'))
+sys.path.insert(0,os.path.abspath('../..'))
 
 
 project = 'CANELa_Loevlie'
@@ -23,6 +23,7 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
     "furo.sphinxext",
+    'sphinx.ext.napoleon',
 ]
 
 intersphinx_mapping = {
