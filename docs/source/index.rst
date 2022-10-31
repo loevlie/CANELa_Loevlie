@@ -16,8 +16,11 @@ the :ref:`installation` instructions for the project.
 .. Contents
 .. --------
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
 
-..    :hidden:
-   
-..    usage 
+   usage
+
+
 
