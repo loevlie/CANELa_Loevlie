@@ -221,15 +221,15 @@ Code Overview
 Example Usage
 ############################################################################################
 
-*Uses*
+**Uses**
 
 * Retreive information from the output files generated after running a calculation using cp2k.
 
-*Important Note* 
+**Important Note**
 
 * The class will retrieve all information under the given directory (with a max depth as an optional extra argument) and use the directory names to classify each calculation you ran. Therefore, you should not have two separate cp2k calculations with the same directory name.
 
-*Example*
+**Example**
 
 The output will be a dictionary of dictionaries (Containing the single point Energy calculations and Geometric optimization final energies found under the specified directory)
 
@@ -256,13 +256,13 @@ Output:
                'Folder_Name3': -1000.900349392778,
                'Folder_Name4': -1000.900349392778})}
 
-*Note:*
+**Note:**
 
 * The output example has fake folder names and energy values for proprietary reasons.
 
 Command line tools
 
-*restart*
+**restart**
 
 cp2k_helper has a handy command line tool for restarting a calculation if it timed out. Just execute the command below in the directory that the calculation timed out and a new subdirectory will be created for the new job. You can then submit the new job to restart the calculation.
 
@@ -270,7 +270,7 @@ cp2k_helper has a handy command line tool for restarting a calculation if it tim
 
    (venv) $ cp2k_helper --restart
 
-*summ*
+**summ**
 
 cp2k_helper can give you a quick summary of your output file. Just use the command below with your output filename:
 
@@ -279,7 +279,7 @@ cp2k_helper can give you a quick summary of your output file. Just use the comma
    (venv) $ cp2k_helper --summ OPT.out
 
 
-*energy*
+**energy**
 
 cp2k_helper can quickly get you the final energy values from all GEO_OPT or ENERGY DFT calculations under a specified directory. The values are converted from Ha to eV. They are saved as a csv (optionally you may name it whatever you want but the default is Energies.csv). An example of using this feature for all of the calculations under the current folder is below:
 
