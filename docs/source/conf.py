@@ -4,8 +4,8 @@
 import os
 import sys
 sys.path.insert(0, os.path.abspath('.'))
-sys.path.insert(0,os.path.abspath('..'))
-#sys.path.insert(1, os.path.dirname(os.path.abspath("../..")) + os.sep + "cp2k_helper")
+# sys.path.insert(0,os.path.abspath('../..'))
+# sys.path.insert(1, os.path.dirname(os.path.abspath("../..")) + os.sep + "feature_engine")
 
 project = 'CANELa_Loevlie'
 copyright = '2022, Dennis Loevlie'
