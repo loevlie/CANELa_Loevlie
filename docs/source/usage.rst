@@ -49,13 +49,14 @@ cp2k_helper
 This package is a collection of functions that I use to parse and analyze CP2K output files. 
 
 
-.. automodule:: cp2k_helper.cp2k_helper.cp2k_helper
-
-
+.. automodule:: cp2k_helper.cp2k_helper
+   :members:
+   :undoc-members:
+   :show-inheritance:
 
 
 CANELa_NP
-^^^^^^^^^^^^
+^^^^^^^^^^
 
 
 Importing packages:
@@ -119,27 +120,23 @@ Visualizing the optimized chemical ordering:
 .. image:: ../../README_Notebook_14_0.png
 
 
+.. tab-set::
 
-Visualizing with ase:
+   .. tab-item:: ASE
+         
+         .. code-block:: python
+   
+            NP.view()
+   
+         .. image:: ../../full_np.png 
+            :align: center
 
-.. code-block:: python
+   .. tab-item:: Molgif 
+            
+            .. code-block:: python
+      
+                  molgif(NP.atoms,add_legend=True)
+      
+            .. image:: ../../Au100Pd209.gif
+               :align: center
 
-   NP.view()
-
-Creating gif with molgif:
-
-.. code-block:: python
-
-   molgif(NP.atoms,add_legend=True)
-
-.. image:: ../../full_np.png 
-   :width: 40%
-.. image:: ../../Au100Pd209.gif
-   :width: 50%
-
-
-
-.. toctree::
-   :caption: Contents:
-   :glob:
-   usage/*
