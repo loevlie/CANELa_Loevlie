@@ -45,7 +45,7 @@ Package Overviews
 
 cp2k_helper
 ^^^^^^^^^^^^^
-.. autoclass:: cp2k_helper.cp2k_helper.cp2k_helper.output_parser
+.. automodule:: cp2k_helper.cp2k_helper.cp2k_helper
    :members:
 
 
