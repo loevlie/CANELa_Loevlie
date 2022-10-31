@@ -42,6 +42,18 @@ Other dependencies include:
 Package Overviews
 ----------------
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   cp2k_helper
+   CANELa_NP
+
+
+cp2k_helper
+^^^^^^^^^^^^^
+
+
 .. code-block:: python
    import numpy as np 
    import pandas as pd
@@ -57,6 +69,10 @@ or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
 will raise an exception.
 
 .. autoexception:: lumache.InvalidKindError
+
+
+CANELa_NP
+^^^^^^^^^^^^^
 
 For example:
 
