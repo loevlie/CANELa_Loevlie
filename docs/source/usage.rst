@@ -129,21 +129,24 @@ cp2k_helper can quickly get you the final energy values from all GEO_OPT or ENER
 
 The above command will save a csv file to your current directory with all of the final energy values along with the type of calculation run and the folder name of each. As of now the .csv file will look similar to below (if you had 4 DFT calculations in the given directory).
 
-Energies.csv
 
-.. list-table:: Title
+.. list-table:: Energies.csv
    :widths: 25 25 50
    :header-rows: 1
 
    * - Folder_Name
-     - Heading row 1, column 2
-     - Heading row 1, column 3
-   * - Type
-     -
-     - Row 1, column 3
-   * - Energy (eV)
-     - Row 2, column 2
-     - Row 2, column 3
+     - Type
+     - Energy (eV)
+   * - Folder_Name1
+     - GEO_OPT
+     - -10000.34324
+   * - Folder_Name2
+     - ENERGY
+     - -10000.34324
+   * - Folder_Name3
+     - GEO_OPT
+     - -10000.34324
+
 
 
 CANELa_NP
@@ -202,7 +205,7 @@ Optimizing the chemical ordering with a genetic algorithm:
    Saving optimized structure...
    Done!
 
-Visualizing the optimized chemical ordering:
+Visualizing the optimized chemical ordering (full NP):
 
 .. code-block:: python
 
@@ -231,3 +234,49 @@ Visualizing the optimized chemical ordering:
             .. image:: ../../Au100Pd209.gif
                :align: center
 
+Visualizing the optimized chemical ordering (X-Cut NP):
+
+.. tab-set::
+
+   .. tab-item:: ASE
+         
+         .. code-block:: python
+   
+            NP.view()
+   
+         .. image:: ../../half_np.png 
+            :align: center
+
+   .. tab-item:: Molgif 
+            
+            .. code-block:: python
+      
+                  molgif(NP.atoms,add_legend=True)
+      
+            .. image:: ../../half_np.gif
+               :align: center
+
+
+Working with your own structure files
+
+.. code-block:: python
+
+   xyz_file = "Example_data/AuPdPt.xyz"
+   NP = Nanoparticle(xyz_file)
+   NP.core_shell_plot()
+
+
+.. image:: ../../README_Notebook_23_0.png
+
+#########################################
+Calculating New Gamma Values
+#########################################
+
+I have provided code to calculate new gamma values for metal combinations we do not currently have already.  Since this was the code that worked for my system, I have not tested it on other systems.  If you are testing other systems please update the code accordingly.  
+
+
+If you would like to generate gamma values for metal combinations that have not been done yet please follow the following steps from the publication Demystifying the Chemical Ordering of Multimetallic Nanoparticles by Dennis Loevlie, Brenno Ferreira, and Giannis Mpourmpakis.
+
+1. Generate equally distributed NP xyz files using the script: `generate_nps <https://github.com/mpourmpakis/CANELa_NP/blob/main/CANELa_NP/Setup_NPs_for_DFT.py>`_
+2. Geometrically optimize these structures to find the most stable energy.
+3. Use this `script <https://github.com/mpourmpakis/CANELa_NP/blob/main/CANELa_NP/Gamma_Value_Calc.py>`_ with the optimized energy values and previously generated structures to calculate the new gamma values (they will be stored in "CANELa_NP/Data/np_gammas.json").  
