@@ -47,25 +47,10 @@ cp2k_helper
 ^^^^^^^^^^^^^
 
 
-.. code-block:: python
-   import numpy as np 
-   import pandas as pd
-   np.random.seed(0)
-
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
-
-.. autofunction:: lumache.get_random_ingredients
-
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
-
-.. autoexception:: lumache.InvalidKindError
 
 
 CANELa_NP
-^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
 
 Importing packages:
@@ -128,7 +113,7 @@ Visualizing the optimized chemical ordering:
 
 .. image:: ../../README_Notebook_14_0.png
 
-Visualizing the NP.
+
 
 Visualizing with ase:
 
@@ -136,25 +121,17 @@ Visualizing with ase:
 
    NP.view()
 
-.. image:: ../../full_np.png 
-
-
-Visuaizing with molgif:
+Creating gif with molgif:
 
 .. code-block:: python
 
    molgif(NP.atoms,add_legend=True)
 
-
+.. image:: ../../full_np.png 
+   :width: 40%
 .. image:: ../../Au100Pd209.gif
+   :width: 50%
 
-
-
-For example:
-
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
 
 
 .. toctree::
