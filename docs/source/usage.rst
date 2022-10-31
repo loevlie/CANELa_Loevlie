@@ -216,15 +216,6 @@ Visualizing the optimized chemical ordering (full NP):
 
 .. tab-set::
 
-   .. tab-item:: ASE
-         
-         .. code-block:: python
-   
-            NP.view()
-   
-         .. image:: ../../full_np.png 
-            :align: center
-
    .. tab-item:: Molgif 
             
             .. code-block:: python
@@ -234,27 +225,39 @@ Visualizing the optimized chemical ordering (full NP):
             .. image:: ../../Au100Pd209.gif
                :align: center
 
-Visualizing the optimized chemical ordering (X-Cut NP):
-
-.. tab-set::
-
    .. tab-item:: ASE
          
          .. code-block:: python
    
             NP.view()
    
-         .. image:: ../../half_np.png 
+         .. image:: ../../full_np.png 
             :align: center
+
+
+Visualizing the optimized chemical ordering (X-Cut NP):
+
+.. tab-set::
 
    .. tab-item:: Molgif 
             
             .. code-block:: python
       
-                  molgif(NP.atoms,add_legend=True)
+                  molgif(NP.cut_atoms,add_legend=True)
       
             .. image:: ../../half_np.gif
                :align: center
+
+   .. tab-item:: ASE
+         
+         .. code-block:: python
+   
+            NP.view(cut=True)
+   
+         .. image:: ../../half_np.png 
+            :align: center
+
+   
 
 
 Working with your own structure files

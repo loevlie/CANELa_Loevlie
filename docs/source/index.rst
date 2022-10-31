@@ -13,11 +13,11 @@ the :ref:`installation` instructions for the project.
 
    This project is under active development.
 
-Contents
---------
+.. Contents
+.. --------
 
-.. toctree::
-   :hidden:
+
+..    :hidden:
    
-   usage 
+..    usage 
 
