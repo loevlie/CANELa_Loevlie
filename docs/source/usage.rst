@@ -71,23 +71,27 @@ CANELa_NP
 Importing packages:
 
 .. code-block:: python
+
    from CANELa_NP.Nanotools import Nanoparticle
    import ase.cluster as ac
 
 Creating a bimetallic ase atoms object:
 
 .. code-block:: python
+
    atoms = ac.Icosahedron('Au', 5)
    atoms.symbols[100:] = 'Pd'
 
 Creating a nanoparticle object:
 
 .. code-block:: python
+
    NP = Nanoparticle(atoms)
 
 Visualizing the non-optimized chemical ordering:
 
 .. code-block:: python
+
    NP.core_shell_plot()
 
 .. image:: ../../README_Notebook_10_0.png
@@ -95,9 +99,11 @@ Visualizing the non-optimized chemical ordering:
 Optimizing the chemical ordering with a genetic algorithm:
 
 .. code-block:: python
+
    NP.run_ga(max_gens=-1,max_nochange=1_000)
 
 .. code-block:: console
+
    --------------------------------------------------
    GA Sim for Au100Pd209 - none:
    Min: -3.66177 eV/atom -- Gen: 02840
@@ -117,6 +123,7 @@ Optimizing the chemical ordering with a genetic algorithm:
 Visualizing the optimized chemical ordering:
 
 .. code-block:: python
+   
    NP.core_shell_plot()
 
 .. image:: ../../README_Notebook_14_0.png
@@ -124,9 +131,9 @@ Visualizing the optimized chemical ordering:
 Visualizing the NP (with ase gui and molgif)
 
 .. image:: ../../full_np.png 
-   :width: 50%
+   :width: 40%
 .. image:: ../../Au100Pd209.gif
-   :width: 50%
+   :width: 40%
 
 
 For example:
