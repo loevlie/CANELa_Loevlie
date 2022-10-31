@@ -74,7 +74,8 @@ Visualizing the non-optimized chemical ordering:
    NP.core_shell_plot()
 
 .. image:: ../../README_Notebook_10_0.png
-
+   :align: center
+   
 Optimizing the chemical ordering with a genetic algorithm:
 
 .. code-block:: python
@@ -106,7 +107,7 @@ Visualizing the optimized chemical ordering (full NP):
    NP.core_shell_plot()
 
 .. image:: ../../README_Notebook_14_0.png
-
+   :align: center
 
 .. tab-set::
 
