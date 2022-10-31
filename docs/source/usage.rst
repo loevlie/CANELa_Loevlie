@@ -273,9 +273,7 @@ Working with your own structure files
 
 #########################################
 Calculating New Gamma Values
-#########################################
-
-I have provided code to calculate new gamma values for metal combinations we do not currently have already.  Since this was the code that worked for my system, I have not tested it on other systems.  If you are testing other systems please update the code accordingly.  
+######################################### 
 
 
 If you would like to generate gamma values for metal combinations that have not been done yet please follow the following steps from the publication Demystifying the Chemical Ordering of Multimetallic Nanoparticles by Dennis Loevlie, Brenno Ferreira, and Giannis Mpourmpakis.
@@ -283,3 +281,29 @@ If you would like to generate gamma values for metal combinations that have not 
 1. Generate equally distributed NP xyz files using the script: `generate_nps <https://github.com/mpourmpakis/CANELa_NP/blob/main/CANELa_NP/Setup_NPs_for_DFT.py>`_
 2. Geometrically optimize these structures to find the most stable energy.
 3. Use this `script <https://github.com/mpourmpakis/CANELa_NP/blob/main/CANELa_NP/Gamma_Value_Calc.py>`_ with the optimized energy values and previously generated structures to calculate the new gamma values (they will be stored in "CANELa_NP/Data/np_gammas.json").  
+
+
+Above I have provided code to calculate new gamma values for metal combinations we do not currently have already.  Please keep in mind that this was the code that worked for my system, I have not tested it on other systems.  I have attempted to make the code general but if you are testing other systems please update the code accordingly. 
+
+.. list-table:: Metals that have NP gamma values calculated for them
+   :widths: 35 35 35
+   :header-rows: 1
+
+   * - Metal Type
+     - Validated with literature?
+     - Functional
+   * - Au
+     - Yes
+     - PBE + D3
+   * - Pd
+     - Yes
+     - PBE + D3
+   * - Pt
+     - Yes
+     - PBE + D3
+   * - Ag
+     - No 
+     - PBE + D3
+   * - Cu
+     - No
+     - PBE + D3
