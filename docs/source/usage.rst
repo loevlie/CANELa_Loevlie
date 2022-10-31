@@ -46,8 +46,9 @@ Package Overviews
 cp2k_helper
 ^^^^^^^^^^^^^
 
+############################################################################################
 This package is a collection of functions that I use to parse and analyze CP2K output files. 
-
+############################################################################################
 
 .. automodule:: cp2k_helper.cp2k_helper
    :members:
