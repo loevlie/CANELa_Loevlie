@@ -1,6 +1,11 @@
 # Configuration file for the Sphinx documentation builder.
 # import sphinx_theme
 # -- Project information
+import os
+import sys
+sys.path.insert(0, os.path.abspath('.'))
+sys.path.insert(0, os.path.abspath('../'))
+
 
 project = 'CANELa_Loevlie'
 copyright = '2022, Dennis Loevlie'
@@ -32,6 +37,7 @@ templates_path = ['_templates']
 
 # html_theme = 'sphinx_rtd_theme'
 html_theme = "furo"
+
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'

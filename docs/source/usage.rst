@@ -45,6 +45,10 @@ Package Overviews
 
 cp2k_helper
 ^^^^^^^^^^^^^
+.. autoclass:: cp2k_helper.cp2k_helper.cp2k_helper.output_parser
+   :members:
+   :undoc-members:
+   :show-inheritance:
 
 
 
