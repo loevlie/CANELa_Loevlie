@@ -31,11 +31,11 @@ It's a wrapper around ce_expansion with some extra functionality.
 Other dependencies include:
 
 * ASE
-* Click
 * Pandas
 * Numpy 
 * Matplotlib
 * Lxml (for web scraping)
+* molgif
 
 
 
