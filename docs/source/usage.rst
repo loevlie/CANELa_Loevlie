@@ -115,7 +115,7 @@ Visualizing the optimized chemical ordering (full NP):
             
             .. code-block:: python
       
-                  NP.view(rotate=True,path=full_np.gif)
+                  NP.view(rotate=True,path="full_np.gif")
       
             .. image:: ../../Au100Pd209.gif
                :align: center
@@ -138,7 +138,7 @@ Visualizing the optimized chemical ordering (X-Cut NP):
             
             .. code-block:: python
 
-                  NP.view(cut=True,rotate=True,path=half_np.gif)
+                  NP.view(cut=True,rotate=True,path="half_np.gif")
       
             .. image:: ../../half_np.gif
                :align: center
