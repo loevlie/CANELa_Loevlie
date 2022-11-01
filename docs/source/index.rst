@@ -1,5 +1,5 @@
 Welcome to the Denny Docs!
-===================================
+===========================
 
 **CANELa_Loevlie** is a collection of Python codes for members of the CANELa lab.  The hope is this documentation will help users understand and improve upon Dennis Loevlie's work from 2021-2022.
 

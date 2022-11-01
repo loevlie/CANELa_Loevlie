@@ -75,7 +75,7 @@ Visualizing the non-optimized chemical ordering:
 
 .. image:: ../../README_Notebook_10_0.png
    :align: center
-   
+
 Optimizing the chemical ordering with a genetic algorithm:
 
 .. code-block:: python
@@ -115,12 +115,12 @@ Visualizing the optimized chemical ordering (full NP):
             
             .. code-block:: python
       
-                  molgif(NP.atoms,add_legend=True)
+                  NP.view(rotate=True,path=full_np.gif)
       
             .. image:: ../../Au100Pd209.gif
                :align: center
 
-   .. tab-item:: ASE
+   .. tab-item:: ASE GUI
          
          .. code-block:: python
    
@@ -137,13 +137,13 @@ Visualizing the optimized chemical ordering (X-Cut NP):
    .. tab-item:: Molgif 
             
             .. code-block:: python
-      
-                  molgif(NP.cut_atoms,add_legend=True)
+
+                  NP.view(cut=True,rotate=True,path=half_np.gif)
       
             .. image:: ../../half_np.gif
                :align: center
 
-   .. tab-item:: ASE
+   .. tab-item:: ASE GUI
          
          .. code-block:: python
    
