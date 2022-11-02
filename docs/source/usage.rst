@@ -175,6 +175,42 @@ Working with your own structure files
 
 .. image:: ../../README_Notebook_23_0.png
 
+##############################################################################
+Adding your Nanoparticle Ordering to the Initial Genetic Algorithm Population
+##############################################################################
+
+One area we have investigated is what happens when you initialize the GA with different chemical orderings.  The code to do so is displayed below.
+
+
+.. warning::
+   From an optimization prospective this can lead to a local minimum.  It is recommended to use the fully randomized initial population as a starting point for a more robust optimization.
+
+
+.. code-block:: python
+
+   xyz_file = "Example_data/AuPdPt.xyz"
+   NP = Nanoparticle(xyz_file,spike=True)
+   NP.run_ga(max_gens=-1,max_nochange=1_000)
+
+.. code-block:: console
+
+   --------------------------------------------------
+   GA Sim for Au100Pd100Pt109 - none:
+   Min: -4.34346 eV/atom -- Gen: 03486
+   Form: Au100Pd100Pt109
+   nAtom: 309
+   nGens: 3486
+   Start: -4.14186 eV/atom
+   Best: -4.34346 eV/atom
+   Diff: -0.2016 eV/atom (4.87%)
+   Mute: 80.0%
+   Pop: 50
+   Time: 0:00:35
+   --------------------------------------------------
+   Saving optimized structure...
+   Done!
+
+
 
 ###########################################################################
 Calculating the Cohesive Energy of a Nanoparticle
