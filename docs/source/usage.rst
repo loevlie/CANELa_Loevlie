@@ -24,7 +24,7 @@ It's a wrapper around ce_expansion with some extra functionality.
 .. code-block:: console
 
    (venv) $ git clone https://github.com/mpourmpakis/CANELa_NP.git
-   (venv) $ cd CANELA_NP
+   (venv) $ cd CANELa_NP
    (venv) $ pip install -e .
 
 
@@ -35,7 +35,9 @@ Other dependencies include:
 * Numpy 
 * Matplotlib
 * Lxml (for web scraping)
-* molgif
+* molgif 
+
+**molgif** is a package developed by **Michael Cowan** that allows you to create gifs of molecules.  It uses ase and ImageMagick.  The view method with the rotate option on the NP object uses molgif to create a gif of the molecule.  
 
 
 
@@ -46,6 +48,9 @@ Package Overviews
 CANELa_NP
 ^^^^^^^^^^
 
+###########################################################################
+Using CANELa_NP to Optimize the Chemical Ordering of a AuPd Nanoparticle
+###########################################################################
 
 Importing packages:
 
@@ -100,7 +105,7 @@ Optimizing the chemical ordering with a genetic algorithm:
    Saving optimized structure...
    Done!
 
-Visualizing the optimized chemical ordering (full NP):
+
 
 .. code-block:: python
 
@@ -108,6 +113,9 @@ Visualizing the optimized chemical ordering (full NP):
 
 .. image:: ../../README_Notebook_14_0.png
    :align: center
+
+
+Visualizing the optimized chemical ordering (full NP):
 
 .. tab-set::
 
@@ -154,8 +162,9 @@ Visualizing the optimized chemical ordering (X-Cut NP):
 
    
 
-
+###########################################################################
 Working with your own structure files
+###########################################################################
 
 .. code-block:: python
 
@@ -165,6 +174,24 @@ Working with your own structure files
 
 
 .. image:: ../../README_Notebook_23_0.png
+
+
+###########################################################################
+Calculating the Cohesive Energy of a Nanoparticle
+###########################################################################
+
+.. code-block:: python
+
+   xyz_file = "Example_data/AuPdPt.xyz"
+   NP = Nanoparticle(xyz_file)
+   NP.calc_ce()
+
+.. code-block:: console
+
+   -4.028279637969337
+
+
+
 
 #########################################
 Calculating New Gamma Values

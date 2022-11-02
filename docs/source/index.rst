@@ -13,8 +13,6 @@ the :ref:`installation` instructions for the project.
 
    This project is under active development.
 
-.. Contents
-.. --------
 
 .. toctree::
    :maxdepth: 3
