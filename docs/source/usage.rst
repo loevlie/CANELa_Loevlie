@@ -183,7 +183,7 @@ One area we have investigated is what happens when you initialize the GA with di
 
 
 .. warning::
-   From an optimization prospective this can lead to a local minimum.  It is recommended to use the fully randomized initial population as a starting point for a more robust optimization.
+   From an optimization perspective this can lead to a local minimum.  It is recommended to use the fully randomized initial population as a starting point for a more robust optimization.
 
 
 .. code-block:: python
