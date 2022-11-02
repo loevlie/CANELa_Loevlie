@@ -37,7 +37,7 @@ Other dependencies include:
 * Lxml (for web scraping)
 * molgif 
 
-**molgif** is a package developed by **Michael Cowan** that allows you to create gifs of molecules.  It uses ase and ImageMagick.  The view method with the rotate option on the NP object uses molgif to create a gif of the molecule.  
+`molgif <https://github.com/mpourmpakis/molgif>`_ is a package developed by **Michael Cowan** that allows you to create gifs of molecules.  It uses ase and ImageMagick.  The view method with the rotate option on the NP object uses molgif to create a gif of the molecule.  
 
 
 
