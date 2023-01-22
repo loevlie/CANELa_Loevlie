@@ -240,8 +240,8 @@ Sometimes it is useful to know the approx. diameter of a nanoparticle.  This can
    NP.get_diam() # Diameter in Angstroms
 
 .. code-block:: console
-   23.079965342691917
 
+   23.079965342691917
 
 
 #########################################
