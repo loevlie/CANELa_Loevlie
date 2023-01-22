@@ -244,6 +244,26 @@ Sometimes it is useful to know the approx. diameter of a nanoparticle.  This can
    23.079965342691917
 
 
+###########################################################################
+Citation
+###########################################################################
+
+If you find the code useful, please also consider the following BibTeX entry:
+
+.. code-block:: BibTex
+
+   @article{doi:10.1021/acs.accounts.2c00646,
+   author = {Loevlie, Dennis Johan and Ferreira, Brenno and Mpourmpakis, Giannis},
+   title = {Demystifying the Chemical Ordering of Multimetallic Nanoparticles},
+   journal = {Accounts of Chemical Research},
+   volume = {0},
+   number = {0},
+   pages = {null},
+   year = {0},
+   doi = {10.1021/acs.accounts.2c00646} }
+
+
+
 #########################################
 Calculating New Gamma Values
 ######################################### 
