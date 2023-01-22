@@ -227,7 +227,20 @@ Calculating the Cohesive Energy of a Nanoparticle
    -4.028279637969337
 
 
+###########################################################################
+Calculating the Diameter of a Nanoparticle
+###########################################################################
 
+Sometimes it is useful to know the approx. diameter of a nanoparticle.  This can be done using the following code:
+
+.. code-block:: python
+
+   xyz_file = "Example_data/AuPdPt.xyz"
+   NP = Nanoparticle(xyz_file)
+   NP.get_diam() # Diameter in Angstroms
+
+.. code-block:: console
+   23.079965342691917
 
 #########################################
 Calculating New Gamma Values
